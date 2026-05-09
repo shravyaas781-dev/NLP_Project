@@ -9,9 +9,9 @@ async def lifespan(app: FastAPI):
     model_service.load(
         main_model_path="ShravyaaS/arxiv-main-category-classifier",
         sub_model_path="ShravyaaS/arxiv-sub-category-classifier",
-        le_main_path="../le_main_category.pkl",
-        le_sub_path="../le_sub_category.pkl",
-        hierarchy_path="../phase4_hierarchy_map.json"
+        le_main_path="le_main_category.pkl",
+        le_sub_path="le_sub_category.pkl",
+        hierarchy_path="phase4_hierarchy_map.json"
     )
     yield
 
