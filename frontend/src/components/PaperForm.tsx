@@ -49,7 +49,7 @@ export default function PaperForm({ onResult }: PaperFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label htmlFor="title" className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="title" className="block text-base font-medium text-gray-900 mb-2">
           Title
         </label>
         <div className="relative">
@@ -62,7 +62,7 @@ export default function PaperForm({ onResult }: PaperFormProps) {
               if (errors.title) setErrors({ ...errors, title: undefined })
             }}
             placeholder="Enter paper title"
-            style={{ backgroundColor: '#F7C59F', borderColor: '#FF6B35' }}
+            style={{ backgroundColor: '#4BA3C3', borderColor: '#004E98' }}
             className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
               errors.title ? "border-red-500" : ""
             }`}
@@ -76,7 +76,7 @@ export default function PaperForm({ onResult }: PaperFormProps) {
       </div>
 
       <div>
-        <label htmlFor="abstract" className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="abstract" className="block text-base font-medium text-gray-900 mb-2">
           Abstract
         </label>
         <div className="relative">
@@ -89,7 +89,7 @@ export default function PaperForm({ onResult }: PaperFormProps) {
             }}
             placeholder="Enter paper abstract (minimum 50 characters)"
             rows={6}
-            style={{ backgroundColor: 'rgba(247, 197, 159, 0.5)', borderColor: '#FF6B35' }}
+            style={{ backgroundColor: '#4BA3C3', borderColor: '#000000' }}
             className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none ${
               errors.abstract ? "border-red-500" : ""
             }`}
