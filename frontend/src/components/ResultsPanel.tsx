@@ -16,7 +16,7 @@ export default function ResultsPanel({ result, onReset }: ResultsPanelProps) {
 
       <div className="grid grid-cols-2 gap-6">
         {/* Main Category Card */}
-        <div className="border border-gray-200 rounded-lg p-6" style={{ backgroundColor: 'rgba(255, 107, 53, 0.3)' }}>
+        <div className="border border-gray-200 rounded-lg p-6" style={{ backgroundColor: '#F7C59F' }}>
           <h3 className="text-sm font-medium text-gray-600 mb-4">Main Category</h3>
           <p className="text-2xl font-bold text-gray-900 mb-6">{result.main_category}</p>
 
@@ -35,7 +35,7 @@ export default function ResultsPanel({ result, onReset }: ResultsPanelProps) {
         </div>
 
         {/* Sub Category Card */}
-        <div className="border border-gray-200 rounded-lg p-6" style={{ backgroundColor: 'rgba(255, 107, 53, 0.3)' }}>
+        <div className="border border-gray-200 rounded-lg p-6" style={{ backgroundColor: '#F7C59F' }}>
           <h3 className="text-sm font-medium text-gray-600 mb-4">Sub-Category</h3>
           <p className="text-2xl font-bold text-gray-900 mb-6">{subCategoryNames[result.sub_category] ?? result.sub_category}</p>
 

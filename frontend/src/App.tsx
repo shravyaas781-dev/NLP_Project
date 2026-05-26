@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#1A659E' }}>
+      <div className="min-h-screen flex flex-col" style={{ backgroundImage: 'url(/Blue.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Top bar with emblem, title, and college info */}
         <div className="border-b border-gray-200 px-6 py-4" style={{ backgroundColor: '#EFEFD0' }}>
           <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -45,7 +45,7 @@ export default function App() {
             <p className="text-center mb-8" style={{ color: '#EFEFD0' }}>
               Paste a paper's title and abstract to classify it into an ArXiv category
             </p>
-            <div className="rounded-2xl shadow-md p-8" style={{ backgroundColor: 'rgba(247, 197, 159, 0.4)' }}>
+            <div className="rounded-2xl shadow-md p-8" style={{ backgroundColor: '#EFEFD0' }}>
               {result
                 ? <ResultsPanel result={result} onReset={() => setResult(null)} />
                 : <PaperForm onResult={setResult} />

@@ -62,7 +62,7 @@ export default function PaperForm({ onResult }: PaperFormProps) {
               if (errors.title) setErrors({ ...errors, title: undefined })
             }}
             placeholder="Enter paper title"
-            style={{ backgroundColor: 'rgba(247, 197, 159, 0.5)', borderColor: '#FF6B35' }}
+            style={{ backgroundColor: '#F7C59F', borderColor: '#FF6B35' }}
             className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
               errors.title ? "border-red-500" : ""
             }`}
