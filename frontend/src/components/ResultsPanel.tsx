@@ -1,4 +1,5 @@
 import { PredictResponse } from "../api/client"
+import { subCategoryNames } from "../api/categoryNames"
 
 interface ResultsPanelProps {
   result: PredictResponse
@@ -15,7 +16,7 @@ export default function ResultsPanel({ result, onReset }: ResultsPanelProps) {
 
       <div className="grid grid-cols-2 gap-6">
         {/* Main Category Card */}
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+        <div className="border border-gray-200 rounded-lg p-6" style={{ backgroundColor: 'rgba(255, 107, 53, 0.3)' }}>
           <h3 className="text-sm font-medium text-gray-600 mb-4">Main Category</h3>
           <p className="text-2xl font-bold text-gray-900 mb-6">{result.main_category}</p>
 
@@ -26,17 +27,17 @@ export default function ResultsPanel({ result, onReset }: ResultsPanelProps) {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
               <div
-                className="bg-blue-600 h-full rounded-full transition-all"
-                style={{ width: `${mainConfPercent}%` }}
+                style={{ width: `${mainConfPercent}%`, backgroundColor: '#FF6B35' }}
+                className="h-full rounded-full transition-all"
               ></div>
             </div>
           </div>
         </div>
 
         {/* Sub Category Card */}
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+        <div className="border border-gray-200 rounded-lg p-6" style={{ backgroundColor: 'rgba(255, 107, 53, 0.3)' }}>
           <h3 className="text-sm font-medium text-gray-600 mb-4">Sub-Category</h3>
-          <p className="text-2xl font-bold text-gray-900 mb-6">{result.sub_category}</p>
+          <p className="text-2xl font-bold text-gray-900 mb-6">{subCategoryNames[result.sub_category] ?? result.sub_category}</p>
 
           <div className="space-y-2">
             <div className="flex justify-between items-center mb-2">
@@ -45,8 +46,8 @@ export default function ResultsPanel({ result, onReset }: ResultsPanelProps) {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
               <div
-                className="bg-indigo-600 h-full rounded-full transition-all"
-                style={{ width: `${subConfPercent}%` }}
+                style={{ width: `${subConfPercent}%`, backgroundColor: '#004E89' }}
+                className="h-full rounded-full transition-all"
               ></div>
             </div>
           </div>
@@ -59,7 +60,8 @@ export default function ResultsPanel({ result, onReset }: ResultsPanelProps) {
 
       <button
         onClick={onReset}
-        className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-2 px-4 rounded-lg transition"
+        style={{ borderColor: '#004E89', color: '#004E89' }}
+        className="w-full border-2 hover:bg-blue-50 font-medium py-2 px-4 rounded-lg transition"
       >
         Classify another paper
       </button>

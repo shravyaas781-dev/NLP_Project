@@ -62,8 +62,9 @@ export default function PaperForm({ onResult }: PaperFormProps) {
               if (errors.title) setErrors({ ...errors, title: undefined })
             }}
             placeholder="Enter paper title"
+            style={{ backgroundColor: 'rgba(247, 197, 159, 0.5)', borderColor: '#FF6B35' }}
             className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-              errors.title ? "border-red-500" : "border-gray-300"
+              errors.title ? "border-red-500" : ""
             }`}
             maxLength={300}
           />
@@ -88,8 +89,9 @@ export default function PaperForm({ onResult }: PaperFormProps) {
             }}
             placeholder="Enter paper abstract (minimum 50 characters)"
             rows={6}
+            style={{ backgroundColor: 'rgba(247, 197, 159, 0.5)', borderColor: '#FF6B35' }}
             className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none ${
-              errors.abstract ? "border-red-500" : "border-gray-300"
+              errors.abstract ? "border-red-500" : ""
             }`}
             maxLength={3000}
           />
@@ -103,7 +105,8 @@ export default function PaperForm({ onResult }: PaperFormProps) {
       <button
         type="submit"
         disabled={mutation.isPending}
-        className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 px-4 rounded-lg transition flex items-center justify-center gap-2"
+        style={{ backgroundColor: mutation.isPending ? '#6B8BA8' : '#004E89' }}
+        className="w-full text-white font-medium py-2 px-4 rounded-lg transition flex items-center justify-center gap-2 hover:opacity-90"
       >
         {mutation.isPending ? (
           <>
